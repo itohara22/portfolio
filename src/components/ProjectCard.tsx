@@ -6,9 +6,21 @@ type Props = {
   bg: string;
   top: string;
   title: string;
+  scale: string;
+  range: number[];
+  progress: any;
 };
 
-export default function ProjectCard({ title, img, bg, top }: Props) {
+export default function ProjectCard({
+  title,
+  img,
+  bg,
+  top,
+  scale,
+  progress,
+  range,
+}: Props) {
+  console.log(range, progress);
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -16,13 +28,15 @@ export default function ProjectCard({ title, img, bg, top }: Props) {
   });
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
 
+  const targetScale = useTransform(progress, range, [1, scale]);
   return (
     <div
       ref={container}
       className="h-screen grid place-items-center sticky top-0"
     >
-      <div
-        className={`${bg} relative flex flex-col h-[500px] w-[90vw] max-w-[1000px] rounded-xl p-5 origin-top ${top}`}
+      <motion.div
+        className={`${bg} relative flex flex-col h-[500px] w-[90vw] max-w-[1000px] rounded-xl p-5 origin-top ${top} relative`}
+        style={{ scale: targetScale }}
       >
         <h2 className="text-center text-7xl font-rozha text-dark-green">
           {title}
@@ -40,7 +54,7 @@ export default function ProjectCard({ title, img, bg, top }: Props) {
             </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
