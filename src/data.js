@@ -1,23 +1,32 @@
-export const projects = [
+export const projectData = [
   {
-    title: "Matthias Leidinger",
+    title: "Ito Estate",
+    img: "/itoEstate.png",
     description:
-      "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
-    src: "/itoEstate.png",
-    color: "#BBACAF",
+      "Fully responsive full stack website to view and list properties to sell or rent with signup and login functionality. (BE PATIENT WITH LIVE LINK ITS SLOW!!!!)",
+    link: "https://ito-estate.onrender.com",
+    bg: "bg-[#EE7674]",
+    top: "top-0",
+    tech: ["MERN", "TailwindCSS", "Firebase"],
   },
   {
-    title: "Clément Chapillon",
+    title: "Article Summarizer",
+    img: "/summarizer.png",
     description:
-      "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
-    src: "/itoEstate.png",
-    color: "#977F6D",
+      "Fully responsive React web app that summarizes online articles using AI summarizer API from RapidAPI.",
+    link: "https://imaginative-fairy-f7b760.netlify.app/",
+    bg: "bg-[#2E86AB]",
+    top: "top-[25px]",
+    tech: ["React", "TailwindCSS", "Rapid API"],
   },
   {
-    title: "Zissou",
+    title: "NextJS Mocksite",
+    img: "/next.png",
     description:
-      "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
-    src: "/itoEstate.png",
-    color: "#C2491D",
+      "A NextJS mock website with on-scroll animations using framer motion",
+    link: "https://intern-app-blue.vercel.app/",
+    bg: "bg-[#5CB76F]",
+    top: "top-[50px]",
+    tech: ["NextJS", "TailwindCSS", "Framer Motion"],
   },
 ];

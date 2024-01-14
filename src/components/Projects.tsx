@@ -1,8 +1,17 @@
+type Project = {
+  title: string;
+  img: string;
+  description: string;
+  link: string;
+  bg: string;
+  top: string;
+  tech: string[];
+};
 import { useScroll } from "framer-motion";
 import { useRef } from "react";
+import { projectData } from "../data.js";
 
 import ProjectCard from "./ProjectCard";
-import img from "/itoEstate.png";
 
 export const Projects = () => {
   const container = useRef(null);
@@ -16,34 +25,26 @@ export const Projects = () => {
       <h2 className="text-center text-7xl sm:text-8xl md:text-9xl font-rozha text-dark-green mb-12">
         Projects
       </h2>
-      <main ref={container} className="relative mt-28 mb-[50vh]">
-        <ProjectCard
-          img={img}
-          bg="bg-[#BBACAF]"
-          top="top-[0]"
-          title="Ito Estate"
-          progress={scrollYProgress}
-          range={[0, 1]}
-          scale={0.7}
-        />
-        <ProjectCard
-          img={img}
-          bg="bg-[#BBACEE]"
-          top="top-[25px]"
-          title="Ito Estate"
-          progress={scrollYProgress}
-          range={[0.25, 1]}
-          scale={0.85}
-        />
-        <ProjectCard
-          img={img}
-          bg="bg-[#BBACAF]"
-          top="top-[50px]"
-          title="Ito Estate"
-          progress={scrollYProgress}
-          range={[0.5, 1]}
-          scale={1}
-        />
+      <main ref={container} className="relative mt-28 mb-[20vh]">
+        {projectData.map((project: Project, i: number) => {
+          const targetScale = 1 - (projectData.length - i) * 0.05;
+          const range = [i * 0.25, 1];
+          return (
+            <ProjectCard
+              key={project.title}
+              img={project.img}
+              bg={project.bg}
+              title={project.title}
+              description={project.description}
+              top={project.top}
+              progress={scrollYProgress}
+              range={range}
+              scale={targetScale}
+              link={project.link}
+              tech={project.tech}
+            />
+          );
+        })}
       </main>
     </div>
   );
