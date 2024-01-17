@@ -48,9 +48,9 @@ export default function ProjectCard({
         <h2 className="text-center text-3xl sm:text-5xl md:text-7xl font-rozha text-white">
           {title}
         </h2>
-        <div className="flex flex-col-reverse md:flex-row h-full mt-12 gap-12">
-          <div className="w-full md:w-[40%] relative flex flex-col justify-between">
-            <p className="mb-4 font-inter text-cream text-lg first-letter:font-rozha first-letter:text-5xl">
+        <div className="flex flex-col-reverse md:flex-row h-full mt-12 gap-6 md:gap-8">
+          <div className="w-full md:w-[40%] relative flex flex-col justify-around">
+            <p className="mb-4 font-inter text-cream text-sm md:text-[1rem] lg:text-lg leading-relaxed">
               {description}
             </p>
             <section className="mb-8 flex flex-wrap gap-1 ">
@@ -63,7 +63,7 @@ export default function ProjectCard({
               target="_blank"
               className="text-2xl font-inter font-semibold"
             >
-              <span className="flex items-center gap-4 font-inter text-cream hover:gap-6 transition-[gap] ease-out duration-200">
+              <span className="flex items-center gap-4 font-inter text-cream text-[1rem] md:text-2xl lg:text-3xl hover:gap-6 transition-[gap] ease-out duration-200">
                 Live link
                 <svg
                   width="32"
@@ -80,7 +80,7 @@ export default function ProjectCard({
               </span>
             </a>
           </div>
-          <div className="p-2 realtive w-full md:w-[60%] h-full overflow-hidden rounded-xl">
+          <div className="sm:p-2 realtive w-full md:w-[65%] h-full overflow-hidden rounded-xl">
             <motion.div
               className="h-full w-full rounded-xl overflow-hidden"
               style={{ scale: imageScale }}

@@ -21,11 +21,11 @@ export const Projects = () => {
   });
 
   return (
-    <div id="projects" className="w-full min-h-screen pt-8">
-      <h2 className="text-center text-7xl sm:text-8xl md:text-9xl font-rozha text-dark-green mb-12">
+    <div id="projects" className="w-full pt-8">
+      <h2 className="text-center text-7xl sm:text-8xl md:text-9xl font-rozha text-dark-green">
         Projects
       </h2>
-      <main ref={container} className="relative mt-28 mb-[20vh]">
+      <main ref={container} className="relative mt-6 mb-[20vh] ">
         {projectData.map((project: Project, i: number) => {
           const targetScale = 1 - (projectData.length - i) * 0.05;
           const range = [i * 0.25, 1];
