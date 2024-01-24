@@ -43,6 +43,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
+          viewport={{ once: true }}
           className="text-xl md:text-3xl lg:text-4xl xl:text-5xl text-right"
         >
           I build things for web

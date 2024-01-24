@@ -3,7 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      rozha: ['"Rozha One"', "serif"],
+      rozha: ["rozha", "serif"],
       inter: ["Inter", "sans-serif"],
     },
     extend: {
@@ -11,7 +11,7 @@ export default {
         "dark-green": "#152705",
         green: "#30580F",
         "light-green": "#E2F3E3",
-        cream: "#FCF8FF",
+        cream: "#fffefd",
         "light-purple": "#F7EDFF",
       },
     },

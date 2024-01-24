@@ -1,11 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Rozha+One&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "rozha";
+  src: url("/Gambarino-Regular.otf");
+  /* src: url("/Archivo-Variable.ttf"); */
+  /* src: url("/Lighthaus.woff"); */
+}
 html {
   scroll-behavior: smooth;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 body {

@@ -1,23 +1,21 @@
-// import { useEffect } from "react";
+import { useState } from "react";
 import About from "./components/About";
 import Connect from "./components/Connect";
 import Hero from "./components/Hero";
 import { Projects } from "./components/Projects";
-// import Lenis from "@studio-freight/lenis/types";
+import SideNav from "./components/SideNav";
+import NavBtn from "./components/NavBtn";
+import { AnimatePresence, useScroll } from "framer-motion";
 
 export default function App() {
-  // useEffect(() => {
-  //   const lenis = new Lenis();
-  //
-  //   function raf(time) {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   }
-  //
-  //   requestAnimationFrame(raf);
-  // }, []);
+  const [isActive, setIsActive] = useState<boolean>(false);
+
+  const { scrollY } = useScroll();
+
   return (
     <>
+      <NavBtn scrollY={scrollY} setIsActive={setIsActive} isActive={isActive} />
+      <AnimatePresence>{isActive && <SideNav />}</AnimatePresence>
       <Hero />
       <Projects />
       <About />
