@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <div className="pt-10 h-screen mx-auto px-10 md:px-[20vw] md:container">
-      <h2 className="text-center text-7xl sm:text-8xl md:text-9xl font-rozha text-dark-green">
+    <div className="pt-10 h-screen mx-auto px-10 md:px-[15vw] md:container">
+      <h2 className="bg-red-50 text-center text-7xl sm:text-8xl lg:text-9xl font-rozha text-dark-green">
         About Me
       </h2>
       <div className="flex justify-center flex-col h-[70vh]">

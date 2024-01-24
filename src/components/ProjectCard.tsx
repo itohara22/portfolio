@@ -27,7 +27,6 @@ export default function ProjectCard({
   link,
   tech,
 }: Props) {
-  console.log(range, progress);
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -54,8 +53,8 @@ export default function ProjectCard({
               {description}
             </p>
             <section className="mb-8 flex flex-wrap gap-1 ">
-              {tech.map((item) => (
-                <ProjectBullet text={item} />
+              {tech.map((item, i) => (
+                <ProjectBullet key={i} text={item} />
               ))}
             </section>
             <a
