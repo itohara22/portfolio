@@ -1,7 +1,7 @@
 import { useInView, useScroll } from "framer-motion";
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import { projectData } from "../data";
+import { projectData } from "../data/projectData";
 
 import ProjectCard from "./ProjectCard";
 

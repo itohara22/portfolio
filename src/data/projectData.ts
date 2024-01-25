@@ -1,4 +1,4 @@
-export const projectData = [
+const projectData = [
   {
     title: "Ito Estate",
     img: "/itoEstate.png",
@@ -30,3 +30,5 @@ export const projectData = [
     tech: ["NextJS", "TailwindCSS", "Framer Motion"],
   },
 ];
+
+export { projectData };
