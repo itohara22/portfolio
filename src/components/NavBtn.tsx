@@ -30,7 +30,7 @@ const NavBtn = ({ setIsActive, scrollY, isActive }: Props) => {
       transition={{ duration: 0.3, ease: "easeInOut" }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.4 }}
-      className="z-50 fixed top-10 right-10 bg-green p-4 aspect-square rounded-full grid place-items-center cursor-pointer"
+      className="z-50 fixed top-10 right-10 bg-green w-14 aspect-square rounded-full grid place-items-center cursor-pointer"
       onClick={() => setIsActive((prev: boolean) => !prev)}
     >
       <svg

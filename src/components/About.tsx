@@ -23,13 +23,13 @@ export default function About() {
         About Me
       </motion.h2>
       <div className="flex justify-center flex-col h-[70vh] overflow-hidden ">
-        <p className="mt-12 font-inter text-dark-green text-2xl">
+        <p className="mt-12 font-inter text-dark-green text-lg md:text-2xl">
           I'm a passionate and creative Web developer developer based in
           Rajasthan. With a keen eye for detail and a love for clean, efficient
           code, I specialize in crafting dynamic and user-friendly web
           applications.
         </p>
-        <p className="mt-12 font-inter text-dark-green text-2xl">
+        <p className="mt-12 font-inter text-dark-green text-lg md:text-2xl">
           In my work I follow the principle of "minimum unnecessary, maximum
           meaning", striving to create designs that are clear, concise, and
           effective in achieving their intended purpose.
