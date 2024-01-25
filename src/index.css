@@ -5,8 +5,6 @@
 @font-face {
   font-family: "rozha";
   src: url("/Gambarino-Regular.otf");
-  /* src: url("/Archivo-Variable.ttf"); */
-  /* src: url("/Lighthaus.woff"); */
 }
 html {
   scroll-behavior: smooth;

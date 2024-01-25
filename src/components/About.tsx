@@ -1,9 +1,24 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 export default function About() {
+  const heading = useRef(null);
+  const isInView = useInView(heading, {
+    margin: "-200px",
+    once: true,
+  });
+
   return (
     <div className="pt-10 h-screen mx-auto px-10 md:px-[15vw] md:container">
-      <h2 className="text-center text-7xl sm:text-8xl lg:text-9xl font-rozha text-dark-green">
+      <motion.h2
+        ref={heading}
+        initial={{ x: -100, opacity: 0 }}
+        animate={isInView ? { x: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        className="text-center text-7xl sm:text-8xl lg:text-9xl font-rozha text-dark-green"
+      >
         About Me
-      </h2>
+      </motion.h2>
       <div className="flex justify-center flex-col h-[70vh]">
         <p className="mt-12 font-inter text-dark-green text-2xl">
           I'm a passionate and creative Web developer developer based in

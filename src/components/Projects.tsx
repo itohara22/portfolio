@@ -29,7 +29,7 @@ export const Projects = () => {
   });
 
   return (
-    <div id="projects" className="w-full pt-8">
+    <div id="projects" className="w-full pt-8 bg-light-purple relative z-10">
       <motion.h2
         initial={{ x: -100, opacity: 0 }}
         animate={isInView ? { x: 0, opacity: 1 } : {}}

@@ -1,23 +1,24 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Header from "./Header";
+import { headingVariants } from "../data/AnimVariants";
+import { useRef } from "react";
 
 export default function Hero() {
-  const headingVariants = {
-    initial: { y: 50, opacity: 0 },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.2,
-        staggerChildren: 0.07,
-        ease: [0.61, 1, 0.88, 1],
-      },
-    },
-  };
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const textScale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   return (
-    <div className="h-[100dvh] mb-12">
+    <div ref={ref} className="h-[100dvh] mb-12">
       <Header />
-      <div className="w-[80vw] h-[80%] mx-auto font-rozha text-dark-green flex flex-col justify-center gap-4">
+      <motion.div
+        style={{ y: textY, opacity: textOpacity, scale: textScale }}
+        className="relative w-[80vw] h-[80%] mx-auto font-rozha text-dark-green flex flex-col justify-center gap-4"
+      >
         <motion.h1
           variants={headingVariants}
           initial="initial"
@@ -48,7 +49,7 @@ export default function Hero() {
         >
           I build things for web
         </motion.h2>
-      </div>
+      </motion.div>
     </div>
   );
 }

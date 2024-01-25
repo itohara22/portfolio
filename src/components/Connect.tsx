@@ -1,6 +1,6 @@
 const Connect = () => {
   return (
-    <div className="min-h-[60vh] container mx-auto px-4">
+    <div className="min-h-[70vh] container mx-auto px-4">
       <h2 className="text-end text-5xl font-rozha text-dark-green mb-12">
         Let's create something together
       </h2>

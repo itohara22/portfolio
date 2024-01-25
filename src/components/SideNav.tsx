@@ -5,9 +5,9 @@ const SideNav = () => {
     <motion.div
       initial={{ x: -800 }}
       animate={{ x: 0 }}
-      exit={{ x: -800, opacity: 0 }}
-      transition={{ ease: "easeOut" }}
-      className="z-50 fixed top-0 bottom-0 left-0 w-[600px] bg-purple-500"
+      exit={{ x: -800 }}
+      transition={{ ease: "easeInOut" }}
+      className="z-50 fixed top-0 bottom-0 left-0 w-[600px] bg-green"
     >
       <ul>
         <li>
