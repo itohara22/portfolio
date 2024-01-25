@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "rozha";
-  src: url("/Gambarino-Regular.otf") format(otf);
+  src: url("/Gambarino-Regular.woff2") format("woff2");
 }
 
 @font-face {
