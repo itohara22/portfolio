@@ -24,7 +24,7 @@ export default function Hero() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="[font-size:clamp(4rem,16vw,12rem)] leading-[6rem] md:leading-[8rem] lg:leading-[10rem] xl:leading-[14rem] mt-14"
+          className="[font-size:clamp(4rem,12vw,12rem)] leading-[6.5rem] lg:leading-[8rem] xl:leading-[11rem] mt-14"
         >
           {"Hey  I'm Shubham".split("  ").map((line, i) => (
             <div key={`${line}+${i}`}>
