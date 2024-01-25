@@ -4,7 +4,7 @@ export default {
   theme: {
     fontFamily: {
       rozha: ["rozha", "serif"],
-      inter: ["Inter", "sans-serif"],
+      inter: ["inter", "sans-serif"],
     },
     extend: {
       colors: {
