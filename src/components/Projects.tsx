@@ -24,7 +24,7 @@ export const Projects = () => {
   });
 
   const isInView = useInView(heading, {
-    margin: "-200px",
+    margin: "-400px",
     once: true,
   });
 

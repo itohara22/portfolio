@@ -4,12 +4,11 @@
 
 @font-face {
   font-family: "rozha";
-  src: url("/Gambarino-Regular.otf");
+  src: url("../Gambarino-Regular.otf") format(otf);
 }
 html {
   scroll-behavior: smooth;
 }
-
 html.lenis {
   height: auto;
 }
@@ -29,7 +28,6 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
-
 body {
   @apply bg-cream;
 }

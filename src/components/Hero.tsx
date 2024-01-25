@@ -26,18 +26,23 @@ export default function Hero() {
           viewport={{ once: true }}
           className="[font-size:clamp(4rem,16vw,12rem)] leading-[6rem] md:leading-[8rem] lg:leading-[10rem] xl:leading-[14rem] mt-14"
         >
-          {"Hey, I'm Shubham".split(" ").map((word, i) => (
-            <span className="block" key={i}>
-              {word.split("").map((char, i) => (
-                <motion.span
-                  className="inline-block"
-                  key={i}
-                  variants={headingVariants}
-                >
-                  {char}
-                </motion.span>
+          {"Hey  I'm Shubham".split("  ").map((line, i) => (
+            <div key={`${line}+${i}`}>
+              {line.split(" ").map((word, i) => (
+                <span className="inline-block" key={i}>
+                  &nbsp;
+                  {word.split("").map((char, i) => (
+                    <motion.span
+                      className="inline-block"
+                      key={i}
+                      variants={headingVariants}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </span>
               ))}
-            </span>
+            </div>
           ))}
         </motion.h1>
         <motion.h2

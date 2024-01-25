@@ -11,7 +11,10 @@ export default function Header() {
           </a>
         </li>
         <li>
-          <a href="#" className="underline-hover relative hover:cursor-pointer">
+          <a
+            href="#connect"
+            className="underline-hover relative hover:cursor-pointer"
+          >
             Let's Talk
           </a>
         </li>

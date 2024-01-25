@@ -16,7 +16,7 @@ const NavBtn = ({ setIsActive, scrollY, isActive }: Props) => {
     } else {
       setShowNavBtn(false);
     }
-    if (latest > 200) {
+    if (latest > 300) {
       setShowNavBtn(true);
     } else {
       setShowNavBtn(false);
