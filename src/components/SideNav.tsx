@@ -11,7 +11,7 @@ const SideNav = () => {
       animate={{ x: 0 }}
       exit={{ x: -800 }}
       transition={{ ease: "easeInOut" }}
-      className="z-50 fixed top-0 bottom-0 left-0 w-[50vw] min-w-[250px] bg-green grid place-items-center"
+      className="z-50 fixed top-0 bottom-0 left-0 w-[35vw] min-w-[250px] bg-[#A14DA0] grid place-items-center"
     >
       <motion.ul
         initial="initial"
