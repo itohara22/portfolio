@@ -24,16 +24,16 @@ export const Projects = () => {
   });
 
   const isInView = useInView(heading, {
-    margin: "-400px",
+    margin: "-300px",
     once: true,
   });
 
   return (
-    <div id="projects" className="w-full pt-8 bg-light-purple relative z-10">
+    <div id="projects" className="w-full pt-20 bg-cream relative z-10">
       <motion.h2
-        initial={{ x: -100, opacity: 0 }}
-        animate={isInView ? { x: 0, opacity: 1 } : {}}
-        transition={{ duration: 0.4, ease: "easeOut" }}
+        initial={{ y: 50, opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.4, ease: [0.61, 1, 0.88, 1] }}
         ref={heading}
         className="text-center text-7xl sm:text-8xl md:text-9xl font-rozha text-dark-green"
       >

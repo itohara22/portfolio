@@ -3,10 +3,10 @@ const Connect = () => {
   return (
     <div
       id="connect"
-      className="flex flex-col min-h-[70vh] container mx-auto px-4 gap-4"
+      className="flex flex-col h-[100vh] container mx-auto px-4 pt-[12rem] gap-4"
     >
       <div>
-        <h2 className="text-end text-3xl sm:text-4xl md:text-5xl font-rozha text-dark-green mb-12">
+        <h2 className="text-end text-3xl sm:text-4xl md:text-6xl font-rozha text-dark-green mb-12">
           Let's create something together
         </h2>
         <motion.div
@@ -27,16 +27,32 @@ const Connect = () => {
           <h3 className="text-xl md:text-3xl lg:text-4xl font-inter">
             Contact Details
           </h3>
-          <ul className="text-xs md:text-lg font-inter">
+          <ul className="text-xs md:text-lg font-inter pl-2">
             <li className="mt-4">ito.k23018@gmail.com</li>
             <li className="mt-4">+91 9509523018</li>
           </ul>
         </div>
         <div>
           <h3 className="text-xl md:text-3xl lg:text-4xl font-inter">Others</h3>
-          <ul className="text-xs md:text-lg font-inter">
-            <li className="mt-4">Linkedin</li>
-            <li className="mt-4">Github</li>
+          <ul className="text-xs md:text-lg font-inter pl-2">
+            <li className="mt-4">
+              <a
+                className="relative underline-hover"
+                href="https://www.linkedin.com/in/shubham-ghogle-25743a258/"
+                target="_blank"
+              >
+                Linkedin
+              </a>
+            </li>
+            <li className="mt-4">
+              <a
+                className="relative underline-hover"
+                href="https://github.com/itohara22"
+                target="_blank"
+              >
+                Github
+              </a>
+            </li>
           </ul>
         </div>
       </div>

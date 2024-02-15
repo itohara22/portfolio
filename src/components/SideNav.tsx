@@ -11,13 +11,13 @@ const SideNav = () => {
       animate={{ x: 0 }}
       exit={{ x: -800 }}
       transition={{ ease: "easeInOut" }}
-      className="z-50 fixed top-0 bottom-0 left-0 w-[50vw] min-w-[250px] bg-light-purple grid place-items-center"
+      className="z-50 fixed top-0 bottom-0 left-0 w-[50vw] min-w-[250px] bg-green grid place-items-center"
     >
       <motion.ul
         initial="initial"
         whileInView="animate"
         transition={{ staggerChildren: 0.07, delayChildren: 0.1 }}
-        className="text-dark-green text-4xl flex flex-col h-full justify-evenly"
+        className="text-cream text-4xl flex flex-col h-full justify-evenly"
       >
         <motion.li variants={navItemsAnim}>
           <a href="#projects" className="">
