@@ -9,14 +9,13 @@ export default function Hero() {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "66%"]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const textScale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   return (
     <div ref={ref} className="h-[100dvh] bg-light-green">
       <Header />
       <motion.div
-        style={{ y: textY, opacity: textOpacity, scale: textScale }}
+        style={{ y: textY, opacity: textOpacity }}
         className="relative w-[80vw] h-[80%] mx-auto font-rozha text-dark-green flex flex-col justify-center gap-4"
       >
         <motion.h1
