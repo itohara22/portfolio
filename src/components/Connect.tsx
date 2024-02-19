@@ -12,6 +12,7 @@ const Connect = () => {
         <motion.div
           initial={{ scale: 0, originX: 0 }}
           whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
           className="w-[85vw] md:w-[70vw] mx-auto bg-green rounded-3xl"
         >
