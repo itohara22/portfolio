@@ -1,4 +1,4 @@
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react";
 import ProjectBullet from "../ui/ProjectBullet";
 
@@ -9,7 +9,7 @@ type Props = {
   title: string;
   scale: number;
   range: number[];
-  progress: any;
+  progress: MotionValue;
   description: string;
   link: string;
   tech: string[];
@@ -32,7 +32,7 @@ export default function ProjectCard({
     target: container,
     offset: ["start end", "start start"],
   });
-  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1.3, 1]);
 
   const targetScale = useTransform(progress, range, [1, scale]);
   return (
